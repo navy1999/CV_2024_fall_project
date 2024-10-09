@@ -10,13 +10,13 @@ const ScrollLink = Scroll.ScrollLink
 const Topbar= () =>{
   return (
   <div>
-    <Navbar id="navbar-main" expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
+    <Navbar id="navbar-main" smooth expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
     <Container>
-      <NavbarBrand href='/PersonalWebsite'>Computer Vision Project Proposal Fall 2024 -Virginia Tech</NavbarBrand>
+      <NavbarBrand href='/'>Computer Vision Project Proposal Fall 2024 -Virginia Tech</NavbarBrand>
       <NavbarToggle aria-controls='basic-navbar-nav' />
       <NavbarCollapse id='basic-navbar-nav'>
         <Nav className='me-auto'>
-          <NavLink href="/PersonalWebsite/#/projects">Approach & Model</NavLink>
+          <NavLink activeClass="active" href="/#/model">Approach & Model</NavLink>
         </Nav>
       </NavbarCollapse>
     </Container>
