@@ -1,6 +1,7 @@
 {
   "name": "cv_fall_2024",
   "version": "0.1.0",
+  "homepage":"https://1amay3.github.io/CV_2024_fall_project/",
   "private": true,
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.0",
@@ -28,12 +29,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +55,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^5.0.0"
   }
 }
