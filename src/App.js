@@ -17,7 +17,7 @@ function App() {
     <Exp/>
     <Success/>
     <Routes>
-      <Route exact path="/about"  element={<About />} />
+      <Route exact path="/"  element={<About />} />
       <Route exact path="/model" model element={<Model/>}/>
     </Routes>
   </Router>
