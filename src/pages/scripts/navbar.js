@@ -15,7 +15,7 @@ const Topbar= () =>{
     <Navbar id="navbar-main" smooth expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
       
     <Container>
-      <NavbarBrand href='/'>Computer Vision Project Proposal Fall 2024 -Virginia Tech</NavbarBrand>
+      <NavbarBrand href='/CV_2024_fall_project'>Computer Vision Project Proposal Fall 2024 -Virginia Tech</NavbarBrand>
       <NavbarToggle aria-controls='basic-navbar-nav' />
       <NavbarCollapse id='basic-navbar-nav'>
         <Nav className='me-auto'>

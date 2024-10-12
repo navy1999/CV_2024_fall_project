@@ -1,7 +1,7 @@
 {
   "name": "cv_fall_2024",
   "version": "0.1.0",
-  "homepage":"https://1amay3.github.io/CV_2024_fall_project/",
+  "homepage": "https://1amay3.github.io/CV_2024_fall_project/",
   "private": true,
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.0",

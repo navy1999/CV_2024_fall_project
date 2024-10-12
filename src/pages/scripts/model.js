@@ -3,6 +3,7 @@ import 'react-bootstrap'
 import { useState } from 'react';
 import { Document, Page ,pdfjs} from 'react-pdf';
 import { Button, Container, Nav } from 'react-bootstrap';
+import unet from './U-NET.jpg';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 const Model =() =>{
     const [numPages, setNumPages] = useState(null);
@@ -18,9 +19,9 @@ const Model =() =>{
            <p> 1. Classifying objects in real time video feeds.
             Popular frameworks used for this purpose uses yolo and R-CNNs. While these are not exactly weak,
             we aim to build a framework that could be done causing lesser computational costs. For that purpose, we propose
-            to use autoencoder network for segmenting visual data, which can help with reducing dimentional complexities and 
+            to use autoencoder network which we plan to create primarily by mimicking U-NET or U-NET++ with a number of modifications for segmenting visual data, which can help with reducing dimentional complexities and 
             hence reducing computational loads. </p>
-
+            <img src={unet} alt="U-NET++" height={650} width={1200}/>
             <p>2.Trajectory projection and prediction:
             While several approaches are in use currently that make use of AI models to find the  trajectory of detected objects and 
             prediction, we intend to go with a more deterministic approach. By our plan, location data of detected objects in
