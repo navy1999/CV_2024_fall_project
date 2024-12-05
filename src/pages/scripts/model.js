@@ -13,14 +13,23 @@ const Model =() =>{
            <Container>  
            <h3>Approach</h3>
             <div >
-            <p>The project intends to determine and classify mobile units in vision, and have a prediction on their possible 
-            futures projected from their mobility parameters.
-            We intend to break this into two: </p>
-           <p> 1. Classifying objects in real time video feeds.
-            Popular frameworks used for this purpose uses yolo and R-CNNs. While these are not exactly weak,
-            we aim to build a framework that could be done causing lesser computational costs. For that purpose, we propose
-            to use autoencoder network which we plan to create primarily by mimicking U-NET or U-NET++ with a number of modifications for segmenting visual data, which can help with reducing dimentional complexities and 
-            hence reducing computational loads. </p>
+            <p>For an accurate prediction through time, our aim was to create a model that could predict (n+m)th frame when given the nth frame.
+            Accordingly, we proceeded to use a 3D convolutional neural network where the 3rd dimension would be the stack of nth to (m-1)th frame. </p>
+           <p> We modified the architecture of classic U-Net for the purpose. We implemented attention gates to the model architecture to prioritize
+           the most relevant features and weighting important regions, which in our case were moving vehicles. </p>
+           <p>Another change we make to typical Unet was to increase the number of features extracted and the layers.
+           While there were many challenges in the process, one that stood out was properly training on hyperparameters for optimal learning.
+           </p>
+           <p>
+           For overcoming this issue, we relied on 3 different loss functions:
+L1 loss helped us to not let outliers(which are a common problem in visual models) have much effect on the training.
+Perceptual loss ensures that the reconstructed image maintained the semantics and textures.
+Gradient Difference Loss focuses on gradient differences between the prediction and the target. A lot of high definition details
+were preserved in the model due to the combination of these losses.
+           </p>
+           <p>
+           For efficient learning, our learning rate and the perceptual loss were dynamically changing, through the use of schedulers for learning rates.
+           </p>
             <img src={unet} alt="U-NET++" height={650} width={1200}/>
             <p>2.Trajectory projection and prediction:
             While several approaches are in use currently that make use of AI models to find the  trajectory of detected objects and 
