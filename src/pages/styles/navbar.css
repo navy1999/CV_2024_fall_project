@@ -5,3 +5,14 @@ a {
 a:hover {
     color:cornsilk;
 }
+
+.nav-link {
+    color: pearlwhite !important; 
+    font-weight: 500;
+    cursor: pointer; 
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #ffffff !important; 
+  }

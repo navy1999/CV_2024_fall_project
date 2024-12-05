@@ -6,7 +6,8 @@ import '../styles/navbar.css';
 import Scroll from 'react-scroll';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
-import  {Link} from 'react-scroll';
+import { Link as LinkRouter } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 const ScrollLink = Scroll.ScrollLink
 //<NavLink activeClass="active" href="/#/approach">Approach & Model</NavLink>
 const Topbar= () =>{
@@ -19,10 +20,10 @@ const Topbar= () =>{
       <NavbarToggle aria-controls='basic-navbar-nav' />
       <NavbarCollapse id='basic-navbar-nav'>
         <Nav className='me-auto'>
-        <NavLink activeClass="active" spy={true} smooth={true} active={true} to="PS" duration={500}>Problem System</NavLink>
-        <NavLink activeClass="active" spy={true} smooth={true} active={true} to="model" duration={500}>Approach & Model</NavLink>
-        <NavLink activeClass="active" spy={true} smooth={true}  active={true} to="exp" duration={500}>Experimental Plan</NavLink>
-        <NavLink activeClass="active" spy={true} smooth={true} active={true} to="success" duration={500}>Success Definition</NavLink>
+        <LinkScroll className="nav-link" activeClass='active' spy={true} smooth={true} active={true} to="PS" duration={500}>Problem Statement</LinkScroll>
+        <LinkScroll className="nav-link" activeClass="active" spy={true} smooth={true} active={true} to="model" duration={500}>Approach & Model</LinkScroll>
+        <LinkScroll className="nav-link" activeClass="active" spy={true} smooth={true}  active={true} to="exp" duration={500}>Experimental Plan</LinkScroll>
+        <LinkScroll className="nav-link" activeClass="active" spy={true} smooth={true} active={true} to="success" duration={500}>Success Definition</LinkScroll>
         </Nav>
       </NavbarCollapse>
     </Container>
