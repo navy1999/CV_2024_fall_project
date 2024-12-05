@@ -24,6 +24,7 @@ const Topbar= () =>{
         <LinkScroll className="nav-link" activeClass="active" spy={true} smooth={true} active={true} to="model" duration={500}>Approach & Model</LinkScroll>
         <LinkScroll className="nav-link" activeClass="active" spy={true} smooth={true}  active={true} to="exp" duration={500}>Experimental Plan</LinkScroll>
         <LinkScroll className="nav-link" activeClass="active" spy={true} smooth={true} active={true} to="success" duration={500}>Success Definition</LinkScroll>
+        <LinkScroll className="nav-link" activeClass="active" spy={true} smooth={true} active={true} to="project" duration={500}>Code</LinkScroll>
         </Nav>
       </NavbarCollapse>
     </Container>
